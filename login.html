@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            height: 580px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 150px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 85%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+             /* Added space above the button */
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .login-container a {
+            display: block;
+            margin-top: 20px; /* Space above links */
+            color: #007BFF;
+            text-decoration: none;
+            
+        }
+        .login-container a:last-of-type {
+            margin-top: 20px;
+            padding: 10px; /* Added space above the last link */
+        }
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHYAAAB2CAYAAAAdp2cRAAAAAXNSR0IArs4c6QAABS1JREFUeF7tnQFOGzEQRe3APQonKRwAI24AJyk9SeEEiOUADSdpeg+SrZxm0+0qIRt7Zv3H+ZGQkLKe2PM84/HYa3vHT5Ua8FW2io1yBFtpJyBYgq1UA5U2ixZLsJVqoNJm0WIJtlINVNqsk7LYl5eXi7u7u0WlLP9rVpVgI8DZbHbvvf+6ae3VAGaEu/5r2/b3bDab39zczGsCXg3YHsxviYAi5OfVavVUg1WbBxuBnp2dRZj3iUCHxaoAbBasgIUe6gdrwLe3t4+HHkT83iTYjZX+cM4Nx04NHS9CCJcagjVlmgP79vZ21bbtT02l7JC9WC6X15bGXlNgC0HtOC+89w9WomczYAtD3cK1YrkmwG7G1F8Tu999P2dizDUBtmmaOKZOESiN7TtPIYSHsQ+XeA4e7Ovr66P3PjXpoKZT7/018ngLD7ZpmlaNTp5gaJcMDbZpmjhXlcoo5WHcXfohhPCkIThXJjpYVGvdRsmoyQtYsE3TREuNFgv9QR1rkcGiRcI7O1jbtt8R88nIYNHdMLQ7hgRrxQ13ZBHdMSRY1LnrvsGeYEeGQQamOcOWwE17IC3WGljEAAoVbEz4X4w0cITH4HLHqGBNTHV6PYpgx5gX4GrOp9WmKx5D1TlnbYx1zjF4GsPW2nSHYMdQdc5ZA7tcLi/RNrpBBk9gW2EOdscQApwe4SrUadFQAAUXEUcdwoI15I7hAidosCDbTU26YWiwsXIG3DGkG4YHix5EIQZN26XEg76m8AOoVouYbeqjgg2eukqCWi301lN4V9yb+kBtbENcWB86VniL7SqMMv2xANWMxfYst+gGcvRx1dQY26/sBMcT7A0VLUE1Z7Gl3LIV92vWYvsV32SmomvW3EJj6i32KsDGRii6ZtMnxph1xcOBUBCweaBmMk/HJL4i4Ph877i9MW/BV3Fgl9l57DGA+1mr+P/5+flF27bbsdh7v/j4+Fig7XpIaeO+MmYSFJKNPgVZBFspZYIl2Eo1UGmzaLEEW6kGKm0WLZZgK9VApc2ixRJseQ10KcMuk9Rlk7z3X5Rq975OqBvMVMFbbFyeW61WV0AHZcZrXebe+2ceknmEOfVWaqIVIp+jGFu1huyce0c7UxHGYgWX3o7oRqKPQi35FQdbAdBh74AAXBQsypZSUbv9J6wo4CJgrbxJJwS8yNUuk4O1dk6iFNypr3aZFGzlrvdQH5jUNU8GFvWtuUM0pL+fauO5OtiJ76GT5qAlbx5CuNYSvs6WaQqPsmmpezWs+ja8KlhC/dxsNN2yGtgTD5TGOkK1V0hUwJ7YPHUsxH3PqcxzxcGCHi2Qq3zt8uJHH4iD5bia3AdEgylRsHTByVDXS4CSd9OKgqW1ZoGNhcWsVgzsieaAs0kOBIhFyZJgrV3QIA1FSp6I1YqApbVKMf0rR+LMCymw1m7dkCUhLE0iIyUF1soFg8II1MRlz2uzwdIN68DNdccSYIuelqaj1vJSc92xBFi6YZ1+kLVmmwWWbliHaCc156DrLLBcmtMFmzPOZoE1eFWZLgl56ck3hBCsPAwxiTkBVC5YphHFMO4UlJxeJFhdMLnSkyPjXLCc6uSi+7w8werqt5j05NRissVyb9M0sFPnsgQ7DZ/kXyHYZNVhFyRYbD7JtSPYZNVhF5wcLLY6WLvk4Imqw9YAwWLzSa4dwSarDrsgwWLzSa4dwSarDrsgwWLzSa4dwSarDrsgwWLzSa4dwSarDrsgwWLzSa4dwSarDrsgwWLzSa4dwSarDrvgHxxeTZVNUagYAAAAAElFTkSuQmCC"/>        </div>
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <a href="#">Forgot your password?</a>
+        <a href="#">Don't have an account? Sign up</a>
+    </div>
+</body>
+</html>
